@@ -1,0 +1,67 @@
+Answers.txt file (Pablo Guardia, FSUID: pjg22b)
+Git Lab Tutorials completed on October 13th, 2024
+GitHub account set up on April 19th, 2022
+My repository for this assignment: https://github.com/PaulDeLOL/assignment2/tree/master
+
+1.  Paste the console output you saved at the end of step 3.C:
+
+pauller@Juans-MacBook-Air-7 assignment2 % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+pauller@Juans-MacBook-Air-7 assignment2 % mkdir docs
+pauller@Juans-MacBook-Air-7 assignment2 % cd docs
+pauller@Juans-MacBook-Air-7 docs % vim status.txt
+pauller@Juans-MacBook-Air-7 docs % git add status.txt
+pauller@Juans-MacBook-Air-7 docs % git commit -m "Add status.txt file inside new docs folder 	containing git status output"
+[master 676c7e4] Add status.txt file inside new docs folder containing git status output
+ 1 file changed, 6 insertions(+)
+ create mode 100644 docs/status.txt
+pauller@Juans-MacBook-Air-7 docs % git push
+Username for 'https://github.com': PaulDeLOL
+Password for 'https://PaulDeLOL@github.com': 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 798 bytes | 798.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/PaulDeLOL/assignment2.git
+   f4975e5..676c7e4  master -> master
+
+
+2.  How many commits have been done to the repository (not only by you, but by anyone) so far? Write
+    the git command you used to get this information
+        Ten commits have been done in total. The command I used was "git rev-list --count --all"
+
+3.  When was the README.md file modified last? Write the git command you used to get this information
+        It was modified on October 14th, 2024 at 5:31 P.M. The command I used was "git log -1 -- README.md"
+
+4.  Mention two reasons why branches are used in a Git repository
+        a. Extra branches can be used to implement different features of a project independently of the main branch, allowing work on a feature without the risk of breaking the main, working codebase.
+        b. Extra branches also allows for the divvying up of work, as one or more developers may work on one branch while another works on another branch, eventually merging the changes together when the features are fully implemented and working correctly.
+
+5.  What is the difference between git log and git status?
+        git log displays a repository's commit history, while git status displays the current state of the current directory, including if files were changed or if one or more files are awaiting a commit.
+
+6.  What command would you use to see the commits where “Vehicle.h” was one of the committed files?
+        I would use "git log -- Vehicle.h"
+
+7.  What command would you use to see the commits whose commit message contains the word “file”?
+        I would use "git log --grep="file""
+
+8.  In the context of object-oriented programming (I) What is inheritance? (II) What is polymorphism (III) What is encapsulation?
+        I.   Inheritance is the concept of a class being a "child" of a "parent" class, inheriting, as the name suggests, all of the attributes and methods of its parent class. In other words, it's the idea of creating a class based on an existing one and reusing a large part of the parent class's code. It's best used to model a hierarchical relationship.
+        II.  Polymorphism is the concept of creating different classes that share method names (called virtual functions in C++, for example), and depending on the object being used, the method behaves in a different way. Polymorphism doesn't necessarily require a hierarchical relationship like inheritance does, and is more a way to generalize code.
+        III. Encapsulation is the concept of hiding information that doesn't need to be known and controlling access to data and functions. In the context of OOP, this entails choosing which attributes or methods to make public (any class can use them) or private (can only be used by the class they're in).
+
+9.  What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration
+    manager” workflow?
+        The "Dictator and Lieutenants" workflow involves many developers pushing their changes into a few "lieutenant" repositories, which in turn are merged by a "dictator" who solves all conflicts before pushing to the main "blessed repository." This means that this workflow is highly centered around the idea of having one person handle all the conflicts and developers having to give their code to this person before the master repository can even be changed. On the other hand, the "Integration manager" workflow is similar, but instead, developers push and pull to and from their own public repositories, while an integration manager has pull from these themselves to solve conflicts. It's a more individualized workflow whereas the "Dictator and Lieutenants" workflow is more hierarchical and relies way more on approval.
+
+10. How would a team of 100 developers benefit from following the “Dictator and Lieutenants” workflow
+    instead of the “Centralized” workflow?
+        Development would be way more organized since one or a few people are in charge of all the conflict resolution. If the developers used the "Centralized" workflow instead, conflict resolution would be up to all 100 developers, which can get very messy very quickly, and perhaps even lead to other consequences such as heavy disagreements and arguments within the team, severely hampering productivity. Using the "Dictator and Lieutenants" workflow could also lead to faster, more efficient decisions due to a Dictator handling all the conflicts.
